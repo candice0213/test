@@ -3,12 +3,11 @@ const router = require('koa-router')();
 
 const app = new Koa();
 
-router.get('/', async (ctx, next) => {
+router.get('/', (ctx, next) => {
     ctx.response.body = `
     <p>host: ${ctx.request.header.host}</p>
     <p>header: ${JSON.stringify(ctx.request.header)}</p>
     `;
-    await next();
 });
 
 // router.get('/', async (ctx, next) => {
