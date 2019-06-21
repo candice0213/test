@@ -5,7 +5,6 @@ const app = new Koa();
 
 router.get('/', async (ctx, next) => {
     ctx.response.body = `
-    <h1>更新啦</h1>
     <p>host: ${ctx.request.header.host}</p>
     <p>header: ${JSON.stringify(ctx.request.header)}</p>
     `;
